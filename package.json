@@ -1,0 +1,11 @@
+{
+  "name": "js_advance_snapshot",
+  "version": "1.0.0",
+  "main": "objects_review.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
