@@ -164,3 +164,19 @@ addrs += customers.address2 + "\n";
 addrs += customers.address3 + "\n";
 
 console.log(addrs);
+
+// sometimes though you have no idea what the exact values of properties or names as its inputed on the fly
+// As an example a program that uses network resources to compute the current value of the user's stock market investments.
+// The program allows the user to type in the number of shares of each stock along with the name of the stock.
+// there would be a function for adding a new stock to the portfolio (dot notation wont work here in this situation) =>
+function addStock (portfolio, stockName, shares) {
+    portfolio[stockName] = shares;
+}
+
+// since the user would enter the stock names at runtime there is no way of knowing
+// property names ahead of time.
+
+// [] => it uses a streing value - which is dynamic and can change at runtime
+// .  => static and must be hard coded into the program
+
+// for/in loop is powerful with associative arrays
