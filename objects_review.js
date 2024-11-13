@@ -180,3 +180,26 @@ function addStock (portfolio, stockName, shares) {
 // .  => static and must be hard coded into the program
 
 // for/in loop is powerful with associative arrays
+function computeValue(portfolio) {
+    let total = 0.0;
+    for(let stock in portfolio) {
+        let shares = portfolio[stock];
+        let price = getQuote(stock);
+        total += shares * price;
+    }
+    return total;
+}
+
+//  Inheritance
+
+let obj = {}; // o inherits object methods from Object.prototype
+obj.x = 1; // and it now has an own property x
+let p = Object.create(obj); // p inherits properties from obj and Object.prototype
+p.y = 2; // p now has very own y property
+let q = Object.create(p); // q inherits properties from p, obj, and Object.prototype
+q.z = 3; // q has own property z
+let f = q.toString(); // toString() is inherited from Object.prototype
+let result = q.x + q.y; // 3; x and y are inherited from obj and p
+console.log(result);
+
+// the delete operator removes a property from an object
